@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+/*  color palette  */
+:root{
+    --rich-black: #040F16;
+    --dark-spring-green: #04724D;
+    --red: #E71D36;
+    --pear: #C1DF1F;
+}
+
+/*  global styles  */
+.container{
+    width:100vw;
+    height:100vh;
+}
+.header{
+    width:100%;
+    height:10;
+    background-color: var(--rich-black);
+    color:#fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* game styling */
+.game{
+    width:100%;
+    height:40%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border:2px solid red;
+    padding: 1rem;
+}
+.option{
+    width:12rem;
+    height:12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.2s;
+    padding: 10px;
+    border:2px dotted var(--rich-black)
+}
+img{
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.option:hover{
+    scale:1.2;
+    box-shadow: 0px 6px 6px var(--red);
+    border:none;
+}
+/* media queries for game */
+@media (max-width:600px){
+    .game{
+        flex-wrap: wrap;
+        height:60%;
+    }
+}
+@media (max-width:476px){
+    .game{
+        flex-wrap: wrap;
+        height:70%;
+    }
+}
+@media (max-width:400px){
+    .game{
+        height:95%;
+        gap:1rem;
+    }
+}
+/* score  */
+.score{
+    /* border:2px solid red; */
+    width:100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:2rem;
+    font-size:2rem;
+    padding: 10px;
+    margin-top: 2rem;
+}
+.user{
+    /* border:2px solid green; */
+    width:5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.computer{
+    /* border:2px solid green; */
+    width:5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* showing message */
+.msg-container{
+    width:100%;
+    height:10%;
+    /* border:2px solid red; */
+    color:#fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.msg-container p{
+    display: inline;
+    width:40%;
+    font-size: 1.4rem;
+    background-color: var(--rich-black);
+    padding: 10px;
+    border-radius: 10px;
+}
+/* media queries for message container */
+@media (max-width:600px){
+    .msg-container p{
+        width:50%;
+    }    
+}
